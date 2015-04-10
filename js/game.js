@@ -297,7 +297,6 @@ equationEntityWithUserInput.drawInputWidget = function() {
 equationEntityWithUserInput.mouseDownHandler = function(mouseX, mouseY){
 var widgetX = this.inputWidgetLocX;
 var widgetY = this.inputWidgetLocY;
-//console.log(mouseX, mouseY);
 	//Adjust mouse cursor seemed like it was not at tip - maybe switch to pointing hand?
 	mouseX = mouseX - 5;
 	mouseY = mouseY - 5;
@@ -508,8 +507,6 @@ var updateObstacles = function() {
 		  currentObstacle.x = Math.floor(Math.random() * GRAPHSIZE);
 		  currentObstacle.y = Math.floor(Math.random() * GRAPHSIZE);
 		  currentObstacle.imageSrcXOffset = Math.floor(Math.random()*NUMOBSTACLEIMAGES)*OBSTACLEIMAGESIZE;
-		  //console.log(currentObstacle.physicsBody);
-		  //console.log(currentObstacle.x, currentObstacle.y, PHYSICSSCALEFACTOR);
 		  currentObstacle.physicsBody.SetPosition({x: currentObstacle.x/PHYSICSSCALEFACTOR, y: currentObstacle.y/PHYSICSSCALEFACTOR});
 		}
 }	
@@ -526,7 +523,6 @@ var insideRect = function(x, y, rectX, rectY, rectWidth, rectHeight) {
 // Turn audio off and on
 var toggleAudio = function() {
 	if (audioOn) {
-		console.log('turning music off');
 		backgroundSong.pause();
 		audioOn = false;
 			}
